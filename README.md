@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Spot the Difference Game
 
 A modern, interactive "Spot the Difference" game built with React, HTML, CSS, and JavaScript. The game features multiple levels, score tracking, and a timer.
@@ -52,3 +53,6 @@ Feel free to submit issues and enhancement requests!
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details. 
+=======
+# spot-the-difference-game
+>>>>>>> 8dd336ef625dc0e7102811fd7314ab174d4619ad
