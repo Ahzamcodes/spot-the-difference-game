@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+}
+#game-title {
+    text-align: center;
+    margin-bottom: 16px;
+}
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    color: #555;
+}
+.images-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.image-container {
+    position: relative;
+    width: 45%;
+    max-width: 500px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.image-container:hover {
+    transform: scale(1.02);
+}
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.image-container canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: auto;
+    z-index: 2;
+    background: transparent;
+}
+#message {
+    margin: 20px 0;
+    font-size: 1.5em;
+    color: #28a745;
+    animation: fadeIn 0.5s ease-in-out;
+}
+button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    background: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+button:hover {
+    background: #0056b3;
+}
+@media (max-width: 768px) {
+    .images-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .image-container {
+        width: 90%;
+    }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+h1 {
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    animation: slideDown 0.5s ease-in-out;
+}
+@keyframes slideDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+} 
