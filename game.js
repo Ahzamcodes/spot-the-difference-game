@@ -15,11 +15,14 @@ function SpotTheDifferenceGame() {
                 image2: "imageRight.jpg"
             },
             differences: [
-                { x: 215, y: 35, width: 30, height: 25 },  // Difference 1
-                { x: 75, y: 200, width: 25, height: 25 },  // Difference 2
-                { x: 495, y: 160, width: 25, height: 30 }, // Difference 3
-                { x: 260, y: 320, width: 30, height: 20 }, // Difference 4
-                { x: 170, y: 190, width: 35, height: 25 }  // Difference 5
+                { x: 78, y: 264, width: 20, height: 20 },  // Difference 1
+                { x: 74, y: 464, width: 20, height: 20 },  // Difference 2
+                { x: 244, y: 150, width: 20, height: 20 }, // Difference 3
+                { x: 226, y: 387, width: 20, height: 20 }, // Difference 4
+                { x: 421, y: 456, width: 20, height: 20 }, // Difference 5
+                { x: 416, y: 77, width: 20, height: 20 },  // Difference 6
+                { x: 520, y: 67, width: 20, height: 20 },  // Difference 7
+                { x: 530, y: 452, width: 20, height: 20 }  // Difference 8
             ]
         },
         {
@@ -104,8 +107,8 @@ function SpotTheDifferenceGame() {
             );
         });
         if (found !== -1) {
+            setScore(prev => prev + 1); // Increment score on every valid click
             if (!foundDifferences.includes(found)) {
-                setScore(prev => prev + 1); // Increment score only on first click
                 setFoundDifferences([...foundDifferences, found]);
                 playSound('click-sound');
                 drawDifference(found);

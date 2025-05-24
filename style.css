@@ -78,6 +78,27 @@ button {
 button:hover {
     background: #0056b3;
 }
+
+.game-button {
+    margin: 20px auto;
+    padding: 15px 30px;
+    font-size: 1.4em;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.game-button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
 @media (max-width: 768px) {
     .images-wrapper {
         flex-direction: column;
@@ -100,4 +121,62 @@ h1 {
 @keyframes slideDown {
     from { transform: translateY(-20px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
+}
+.difference-highlight {
+    position: absolute;
+    border: 3px solid #28a745;
+    background-color: rgba(40, 167, 69, 0.2);
+    pointer-events: none;
+    z-index: 3;
+    animation: highlightFade 0.5s ease-in-out;
+    border-radius: 50%;
+    transform-origin: center;
+}
+.difference-name {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #28a745;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    white-space: nowrap;
+    pointer-events: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+@keyframes highlightFade {
+    from { 
+        background-color: rgba(40, 167, 69, 0.4);
+        transform: scale(1.2);
+    }
+    to { 
+        background-color: rgba(40, 167, 69, 0.2);
+        transform: scale(1);
+    }
+}
+
+.marker {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 0, 0, 0.5);
+    border: 2px solid #ff0000;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    animation: markerFade 2s ease-in-out forwards;
+    z-index: 4;
+}
+
+@keyframes markerFade {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1.5);
+    }
 } 

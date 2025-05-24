@@ -1,12 +1,43 @@
 {
-  "gameTitle": "Spot the Difference - Animals",
-  "images": {
-    "image1": "image1.jpg",
-    "image2": "image2.jpg"
-  },
+  "level": 1,
+  "theme": "Animals",
+  "imageLeft": "imageLeft.jpg",
+  "imageRight": "imageRight.jpg",
   "differences": [
-    { "x": 100, "y": 200, "width": 50, "height": 50 },
-    { "x": 300, "y": 150, "width": 40, "height": 40 },
-    { "x": 500, "y": 300, "width": 30, "height": 30 }
+    {
+      "id": 1,
+      "label": "Banana near Monkey",
+      "x": 70,
+      "y": 340,
+      "radius": 30
+    },
+    {
+      "id": 2,
+      "label": "Hippo Eyes",
+      "x": 270,
+      "y": 300,
+      "radius": 35
+    },
+    {
+      "id": 3,
+      "label": "Elephant Body",
+      "x": 360,
+      "y": 250,
+      "radius": 35
+    },
+    {
+      "id": 4,
+      "label": "Crocodile Tail Missing",
+      "x": 500,
+      "y": 350,
+      "radius": 20
+    },
+    {
+      "id": 5,
+      "label": "Palm Tree Alignment",
+      "x": 420,
+      "y": 300,
+      "radius": 30
+    }
   ]
 } 
